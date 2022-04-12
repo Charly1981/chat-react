@@ -1,7 +1,10 @@
 import React from "react";
+import { ChatContext } from "./context/ChatProvider";
 
 const App = () => {
-  return <div>CHAT</div>;
+  const { saludo } = React.useContext(ChatContext);
+
+  return <div>CHAT {saludo}</div>;
 };
 
 export default App;
