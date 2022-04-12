@@ -3,12 +3,13 @@ import Navbar from "./components/Navbar";
 import { ChatContext } from "./context/ChatProvider";
 
 const App = () => {
-  const { saludo } = React.useContext(ChatContext);
-
-  return (
+  const { usuario } = React.useContext(ChatContext);
+  return usuario != null ? (
     <div>
       <Navbar />
     </div>
+  ) : (
+    <div>cargando...</div>
   );
 };
 
